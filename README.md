@@ -17,7 +17,7 @@
    With ``return`` the calculated value is returned.
 2. Following is the information for chioro to manage the function:
 
-   ``impl`` is the name of the function and must match the name in javascript
+   ``id`` and ``impl`` are the name of the function and must match the name in javascript
 
    ``aliases`` are the names of the function in the respective language. These names are displayed in the toolbox.
 
@@ -45,7 +45,7 @@
    Mit return wird der berechnete Wert zurückgegeben.
 2. Es folgen die Informationen für chioro um die Funktion zu verwalten:
 
-   ``impl`` ist der Name der Funktion und muss dem Namen in Javascript entsprechen
+   ``id`` und ``impl`` enthalten den Namen der Funktion und müssen dem Namen in Javascript entsprechen
 
    ``aliases`` sind die Namen der Funktion in der jeweiligen Sprache. Diese Namen werden in der Toolbox angezeigt.
 

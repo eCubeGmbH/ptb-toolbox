@@ -14,6 +14,7 @@ function niceFunction(input1, input2) {
     return base.upperCaseText(input1) + " " + base.lowerCaseText(input2);
 }
 tools.add({
+    id: "niceFunction",
     impl: niceFunction,
     aliases: {
         en: "niceFunction",

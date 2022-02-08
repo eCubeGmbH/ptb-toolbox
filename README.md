@@ -4,11 +4,13 @@
 ## English description
 [Link zur deutschen Beschreibung](#deutsche-beschreibung)
 
-- Create a new git repository and copy all the stuff from this template to it.
-- Run `npm install` first time
-- Run `npm test` to run all the tests
-- To add a new tool just edit ``extension.js``.
-  There is an example tool called ``niceFunction``. The tools are written in JavaScript.
+- Create a new git repository and copy all the files from this template to it.
+- Run `npm install` first time to install the dependencies(Chioro Standard Library).
+- To add a new tool edit ``extension.js``.
+  There is an example tool called ``niceFunction``. The tools are written in JavaScript. For a detailed description of the sample code refer to the [next section](#anatomy-of-a-tool).
+- After the functions are written, run `npm test` to run all the tests and make sure everything is working properly.
+
+### Anatomy of a tool
 
 
 ![](https://chioro.ams3.digitaloceanspaces.com/images_toolbox/function_overview.png)
@@ -29,15 +31,16 @@
 
 
 
-
 ## Deutsche Beschreibung
 
-- Erstellen Sie ein neues Repository in GitLab und kopieren Sie alles aus dieser Vorlage dorthin.
+- Erstellen Sie ein neues git Repository und kopieren Sie alles aus dieser Vorlage dorthin.
 - Führen Sie `npm install` einmalig aus um die Abhängigkeiten zu laden (Basic-Paket)
-- Führen Sie `npm test` aus, um alle Tests zu starten. Damit kann, nach jeder Ergänzung der Toolbox, die Validität überprüft werden.
 - Um ein neues Werkzeug hinzuzufügen, editieren Sie einfach ``extension.js``.
-  Es gibt ein Beispielwerkzeug namens ``niceFunction``. Die Werkzeuge sind in JavaScript geschrieben.
+  Es gibt ein Beispielwerkzeug namens ``niceFunction``. Die Werkzeuge sind in JavaScript geschrieben. Eine detaillierte Beschreibung des Beispielcodes finden Sie im [nächsten Abschnitt](#anatomie-eines-werkzeugs).
+- Nachdem die Funktionen geschrieben wurden, führen Sie `npm test` aus, um alle Tests durchzuführen und sicherzustellen, dass alles richtig funktioniert.
 
+
+### Anatomie eines Werkzeugs
 
 ![](https://chioro.ams3.digitaloceanspaces.com/images_toolbox/function_overview.png)
 

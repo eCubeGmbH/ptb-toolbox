@@ -21,8 +21,8 @@ tools.add({
         de: "netteFunktion"
     },
     args: {
-        en: ["input1", "input2"],
-        de: ["eingabe1", "eingabe2"]
+        en: "input1, input2",
+        de: "eingabe1, eingabe2"
     },
     tags: ["tag1", "tag2"],
     tests: () => {

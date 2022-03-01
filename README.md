@@ -13,7 +13,7 @@
 ### Anatomy of a tool
 
 
-![](https://chioro.ams3.digitaloceanspaces.com/images_toolbox/function_overview.png)
+![](https://chioro.ams3.digitaloceanspaces.com/images_toolbox/function_overview_03.png)
 
 1. Here is the function itself. JavaScript is fully available, tools from the base package can be used with a prefix ``base.``. In this example ``upperCaseText`` and ``lowerCaseText`` from the base package are used.
    With ``return`` the calculated value is returned.
@@ -42,7 +42,7 @@
 
 ### Anatomie eines Werkzeugs
 
-![](https://chioro.ams3.digitaloceanspaces.com/images_toolbox/function_overview.png)
+![](https://chioro.ams3.digitaloceanspaces.com/images_toolbox/function_overview_03.png)
 
 1. Hier steht die Funktion selber. JavaScript steht in vollem Umfang zur Verfügung, Werkzeuge aus dem Basis-Paket können mit einem vorangestellten ``base.`` verwendet werden. In diesem Beispiel werden ``upperCaseText``und ``lowerCaseText`` aus dem Basis-Paket verwendet.
    Mit return wird der berechnete Wert zurückgegeben.

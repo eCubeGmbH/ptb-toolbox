@@ -1,5 +1,5 @@
 {
-  "name": "toolbox-ext-template",
+  "name": "pos-toolbox",
   "version": "1.0.0",
   "description": "A Template to generate a toolbox extension for chioro",
   "main": "extension.js",

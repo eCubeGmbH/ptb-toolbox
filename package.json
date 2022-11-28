@@ -17,3 +17,5 @@
     "chioro-toolbox": "github:eCubeGmbH/chioro-toolbox"
   }
 }
+git+https://gitlab.com/chioro.io/toolbox-extension-template.git
+git+https://github.com/eCubeGmbH/toolbox-ext-template.git

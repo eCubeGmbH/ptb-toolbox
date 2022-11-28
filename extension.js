@@ -10,15 +10,15 @@ const base = require('chioro-toolbox/toolbase')
 const tools = new Toolpackage("My great toolbox extension")
 
 
-function niceFunction(input1, input2) {
+function niceFunction2(input1, input2) {
     return base.upperCaseText(input1) + " " + base.lowerCaseText(input2);
 }
 tools.add({
-    id: "niceFunction",
-    impl: niceFunction,
+    id: "niceFunction2",
+    impl: niceFunction2,
     aliases: {
-        en: "niceFunction",
-        de: "netteFunktion"
+        en: "niceFunction2",
+        de: "netteFunktion2"
     },
     args: {
         en: "input1, input2",
@@ -26,8 +26,8 @@ tools.add({
     },
     tags: ["tag1", "tag2"],
     tests: () => {
-        tools.expect(niceFunction("hello", "world")).toBe('HELLO world');
-        tools.expect(niceFunction("Helping", "World")).toBe('HELPING world');
+        tools.expect(niceFunction2("hello", "world")).toBe('HELLO world');
+        tools.expect(niceFunction2("Helping", "World")).toBe('HELPING world');
     }
 })
 

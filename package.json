@@ -1,5 +1,5 @@
 {
-  "name": "toolbox-extension-template",
+  "name": "toolbox-ext-template",
   "version": "1.0.0",
   "description": "A Template to generate a toolbox extension for chioro",
   "main": "extension.js",
@@ -12,8 +12,8 @@
   },
   "author": "",
   "license": "ISC",
-  "homepage": "https://gitlab.com/chioro.io/toolbox-extension-template#readme",
+  "homepage": "https://github.com/eCubeGmbH/toolbox-extension-template#readme",
   "dependencies": {
-    "chioro-toolbox": "gitlab:chioro.io/chioro-toolbox"
+    "chioro-toolbox": "github:eCubeGmbH/chioro-toolbox"
   }
 }

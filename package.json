@@ -14,6 +14,7 @@
   "license": "ISC",
   "homepage": "https://github.com/eCubeGmbH/pos-toolbox#readme",
   "dependencies": {
-    "chioro-toolbox": "github:eCubeGmbH/chioro-toolbox"
+    "chioro-toolbox": "github:eCubeGmbH/chioro-toolbox",
+    "pos-toolbox": "github:eCubeGmbH/pos-toolbox"
   }
 }

@@ -1,0 +1,1 @@
+buildCloudinaryPublicId(prefix,image)

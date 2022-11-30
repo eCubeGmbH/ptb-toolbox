@@ -1,0 +1,1 @@
+posPrice("currency", "value")

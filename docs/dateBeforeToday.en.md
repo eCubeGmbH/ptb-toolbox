@@ -1,0 +1,1 @@
+Checks whether the provided valus (date) is befoe current date. If so -> returns "true" ("expired"). Note: Value provided  must follow patter yyyy-mm-dd. If not given, more (transformation) functions are necessary.

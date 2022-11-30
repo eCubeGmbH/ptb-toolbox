@@ -1,0 +1,1 @@
+Prüft, ob der übergebene Wert (Datum) vor dem heutigen Datum liegt. Falls ja -> Rückgabe "true" ("expired"). Hinweis: Datum muss im Format yyyy-mm-dd übergeben werden.Falls er nicht so vorliegt, sind ggf. weitere Funktionen zur Transformtion nötig.

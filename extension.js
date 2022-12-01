@@ -168,8 +168,14 @@ tools.add({
     tags: ["Possehl"]
 })
 //-----------------------------------------------------------------------------------------------------
-function removeFileExtension(param) {
-    return param.replace(/\.[^.]+$/, "")
+function removeFileExtension(image) {
+    let result = "";
+    if (image.endsWith(".jpg") || image.endsWith(".png") || image.endsWith(".tiff") || image.endsWith(".jpeg") || image.endsWith(".gif") || image.endsWith(".pdf") || image.endsWith(".bmp")) {
+        result = image.replace(/\.[^.]+$/, ""); // wenn Bilddateiendung am Ende gefunden - entfernen
+    } else {
+        result = image; // ansonsten muss das direkt verwendet werden
+    }
+    return result
 }
 tools.add({
     id: "removeFileExtension",
@@ -179,10 +185,16 @@ tools.add({
         de: "entferneDateiExtension"
     },
     args: {
-        en: "param",
-        de: "param"
+        en: "image",
+        de: "image"
     },
-    tags: ["Possehl"]
+    tags: ["Possehl"],
+    tests: () => {
+        tools.expect(removeFileExtension("bild.jpg")).toBe('bild');
+        tools.expect(removeFileExtension("bild.jpg.max")).toBe('bild.jpg.max');
+        tools.expect(removeFileExtension("https://210512ytnvmdy73ryr4.nextcloud.hosting.zone/s/CsAqt7bybpmJPs7/download")).
+                                  toBe('https://210512ytnvmdy73ryr4.nextcloud.hosting.zone/s/CsAqt7bybpmJPs7/download');
+    }
 })
 //-----------------------------------------------------------------------------------------------------
 function posCheckPriceFormat(price) {

@@ -346,6 +346,8 @@ function posStripHtmlTags(inputString, ersatzOeffnend, ersatzSchliessend, ersatz
     outputString = ersetzeInText(outputString,"&Uuml;","Ü");
     outputString = ersetzeInText(outputString,"&Ouml;","Ö");
     outputString = ersetzeInText(outputString,"&nbsp;"," "); // no-brake space
+    outputString = base.normalisiereLücken(outputString);
+    outputString.trim();
     return outputString
 }
 tools.add({

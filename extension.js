@@ -75,9 +75,9 @@ function posHTMLReplaceTags(transformString, replaceOpeningTag, replaceClosingTa
 
 //    if (transformString.indexOf("<") > -1 && transformString.indexOf(">") > -1) {
 
-    while ( transformString.indexOf("<") > -1 && transformString.indexOf(">") > -1 ){
+//    while ( transformString.indexOf("<") > -1 && transformString.indexOf(">") > -1 ){
         if (istNichtLeer(transformString)) {transformString = posHTMLFindAndPrepareTags(transformString);}
-    }
+//    }
 //    }
 
     transformString = ersetzeInText(transformString,"openingTag", replaceOpeningTag);

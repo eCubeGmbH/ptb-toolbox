@@ -67,54 +67,6 @@ tools.add({
     }
 })
 //-----------------------------------------------------------------------------------------------------
-function posHTMLReplaceTags(transformString, replaceOpeningTag, replaceClosingTag, replaceBR){
-
-    // Special treatment of "<bvr />"-tag: Replace by "<p></p>" befor further handling.
-    transformString = transformString.replace("<br />", "<br/>");
-    transformString = transformString.replace("<br/>", replaceBR);
-
-//    if (transformString.indexOf("<") > -1 && transformString.indexOf(">") > -1) {
-
-//    while ( transformString.indexOf("<") > -1 && transformString.indexOf(">") > -1 ){
-        if (istNichtLeer(transformString)) {transformString = posHTMLFindAndPrepareTags(transformString);}
-//    }
-//    }
-
-    transformString = ersetzeInText(transformString,"openingTag", replaceOpeningTag);
-    transformString = ersetzeInText(transformString,"closingTag", replaceClosingTag);
-    transformString = ersetzeInText(transformString,"&auml;","ä");
-    transformString = ersetzeInText(transformString,"&uuml;","ü");
-    transformString = ersetzeInText(transformString,"&ouml;","ö");
-    transformString = ersetzeInText(transformString,"&szlig;","ß");
-    transformString = ersetzeInText(transformString,"&Auml;","Ä");
-    transformString = ersetzeInText(transformString,"&Uuml;","Ü");
-    transformString = ersetzeInText(transformString,"&Ouml;","Ö");
-    transformString = ersetzeInText(transformString,"&nbsp;"," "); // no-brake space
-
-//    while (transformString.indexOf("<p></p><p></p>") > -1) {
-    transformString = replaceInText(transformString,"<p></p><p></p>","<p></p>");
-//    }
-
-//    while (transformString.indexOf("  ") > -1) {
-    transformString = replaceInText(transformString,"  "," ");
-//    }
-
-    return transformString.trim();
-}
-tools.add({
-    id: "posHTMLReplaceTags",
-    impl: posHTMLReplaceTags,
-    aliases: {
-        en: "posHTMLReplaceTags",
-        de: "posHTMLReplaceTags"
-    },
-    args: {
-        en: "transformString, replaceOpeningTag, replaceClosingTag, replaceBR",
-        de: "transformString, replaceOpeningTag, replaceClosingTag, replaceBR"
-    },
-    tags: ["Possehl"]
-})
-//-----------------------------------------------------------------------------------------------------
 function buildCloudinaryPublicId(prefix,image) {
     let id = "";
     if (image.endsWith(".jpg") || image.endsWith(".png") || image.endsWith(".tiff") || image.endsWith(".jpeg") || image.endsWith(".gif") || image.endsWith(".pdf") || image.endsWith(".bmp")) {
@@ -289,44 +241,6 @@ tools.add({
     args: {
         en: "url",
         de: "url"
-    },
-    tags: ["Possehl"]
-})
-//-----------------------------------------------------------------------------------------------------
-function posHTMLFindAndPrepareTags(originalString){
-    let returnString = "";
-    let tag = "<";
-    let j = originalString.indexOf("<")+1;
-//    var l = originalString.length;
-//    var i = 0;
-
-//    if ( j < l ) {
-    while ( originalString.charAt(j) != ">") { //&& i <= l ) {
-        tag = tag + originalString.charAt(j);
-        j++;
-//        i++;
-    }
-//    }
-
-    tag = tag + ">";
-//		if (tag.indexOf("/") > -1) {
-//			returnString = ersetzeInText(returnString,tag,"closingTag");
-//		} else {
-    returnString = ersetzeInText(originalString,tag,"openingTag");
-//		}
-
-    return returnString.trim();
-}
-tools.add({
-    id: "posHTMLFindAndPrepareTags",
-    impl: posHTMLFindAndPrepareTags,
-    aliases: {
-        en: "posHTMLFindAndPrepareTags",
-        de: "posHTMLFindAndPrepareTags"
-    },
-    args: {
-        en: "originalString",
-        de: "originalString"
     },
     tags: ["Possehl"]
 })

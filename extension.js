@@ -245,6 +245,26 @@ tools.add({
     tags: ["Possehl"]
 })
 //-----------------------------------------------------------------------------------------------------
+function fetchRealUrl(url) {
+    if(url && url.startsWith && url.startsWith("http")) {
+       return JSON.parse(_apiFetcher.headUrl($('image'), false)).location[0];
+    }
+    return url;
+}
+tools.add({
+    id: "fetchRealUrl",
+    impl: fetchRealUrl,
+    aliases: {
+        en: "fetchRealUrl",
+        de: "fetchRealUrl"
+    },
+    args: {
+        en: "url",
+        de: "url"
+    },
+    tags: ["Possehl"]
+})
+//-----------------------------------------------------------------------------------------------------
 function posStripHtmlTags(inputString, ersatzOeffnend, ersatzSchliessend, ersatzFuerBR) {
     var outputString = "";
     outputString = ersetzeInText(inputString, /<br[^>]*>/g, ersatzFuerBR);

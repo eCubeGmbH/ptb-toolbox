@@ -1,5 +1,6 @@
 const Toolpackage = require('chioro-toolbox/toolpackage')
 const base = require('chioro-toolbox/toolbase')
+const { htmlToText } = require('html-to-text');
 
 // Toolbox extensions are organized as "Tool Packages".
 // A ToolPackage is a collection of tool descriptions, including tests.
@@ -9,6 +10,26 @@ const base = require('chioro-toolbox/toolbase')
 
 const tools = new Toolpackage("My great toolbox extension")
 
+function posHtmlToText(inputString) {
+    return htmlToText(inputString, { wordwrap: null });
+}
+tools.add({
+    id: "posHtmlToText",
+    impl: posHtmlToText,
+    aliases: {
+        en: "posHtmlToText",
+        de: "posHtmlToText"
+    },
+    args: {
+        en: "inputString",
+        de: "inputString"
+    },
+    tags: ["Possehl"],
+    tests: () => {
+        tools.expect(posHtmlToText("<h1>Title</h1><p>total</p>hello<br>w&ouml;rld")).toBe('TITLE\n\ntotal\n\nhello\nwörld');
+    }
+})
+//-----------------------------------------------------------------------------------------------------
 
 // function niceFunction22(input1, input2) {
 //     return base.upperCaseText(input1) + " " + base.lowerCaseText(input2);

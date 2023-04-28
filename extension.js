@@ -171,6 +171,7 @@ tools.add({
 })
 //-----------------------------------------------------------------------------------------------------
 function posCheckPriceFormat(price) {
+    price = price.trim();
     //   if (containsText(price, /\d+\.\d+\.\d+(\.)?/)) { // min. two dots (million, trillion,...)
     //       price = replaceInText('.','') \d{1,20},\d{1}(?!\d)
     //   }

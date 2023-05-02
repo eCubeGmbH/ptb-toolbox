@@ -20,7 +20,7 @@ tools.add({
         en: "posHtmlToText",
         de: "posHtmlToText"
     },
-    args: {
+    argsOld: {
         en: "inputString",
         de: "inputString"
     },
@@ -78,7 +78,7 @@ tools.add({
         en: "posStripHtml_Test",
         de: "posStripHtml_Test"
     },
-    args: {
+    argsOld: {
         en: "inputString, ersatzOeffnend, ersatzSchliessend, ersatzFuerBR",
         de: "inputString, ersatzOeffnend, ersatzSchliessend, ersatzFuerBR"
     },
@@ -106,7 +106,7 @@ tools.add({
         en: "buildCloudinaryPublicId",
         de: "buildCloudinaryPublicId"
     },
-    args: {
+    argsOld: {
         en: "prefix,image",
         de: "prefix,image"
     },
@@ -134,7 +134,7 @@ tools.add({
         en: "posIdentifyAffectedOffers",
         de: "posIdentifyAffectedOffers"
     },
-    args: {
+    argsOld: {
         en: "orderUnit, quantityMin, quantityInterval, lowerBound, hazardous, mimeDescHazard, mimePurposeHazard, tax, price_de",
         de: "orderUnit, quantityMin, quantityInterval, lowerBound, hazardous, mimeDescHazard, mimePurposeHazard, tax, price_de"
     },
@@ -157,7 +157,7 @@ tools.add({
         en: "removeFileExtension",
         de: "entferneDateiExtension"
     },
-    args: {
+    argsOld: {
         en: "image",
         de: "image"
     },
@@ -203,7 +203,7 @@ tools.add({
         en: "posCheckPriceFormat",
         de: "posCheckPriceFormat"
     },
-    args: {
+    argsOld: {
         en: "price",
         de: "price"
     },
@@ -232,7 +232,7 @@ tools.add({
         en: "getBmeCatImage",
         de: "getBmeCatImage"
     },
-    args: {
+    argsOld: {
         en: "",
         de: ""
     },
@@ -260,7 +260,7 @@ tools.add({
         en: "isImage",
         de: "isImage"
     },
-    args: {
+    argsOld: {
         en: "url",
         de: "url"
     },
@@ -280,7 +280,7 @@ tools.add({
         en: "fetchRealUrl",
         de: "fetchRealUrl"
     },
-    args: {
+    argsOld: {
         en: "url",
         de: "url"
     },
@@ -313,7 +313,7 @@ tools.add({
         en: "posStripHtmlTags",
         de: "posStripHtmlTags"
     },
-    args: {
+    argsOld: {
         en: "inputString, ersatzOeffnend, ersatzSchliessend, ersatzFuerBR",
         de: "inputString, ersatzOeffnend, ersatzSchliessend, ersatzFuerBR"
     },
@@ -339,7 +339,7 @@ tools.add({
         en: "dateBeforeToday",
         de: "dateBeforeToday"
     },
-    args: {
+    argsOld: {
         en: "relevantDateField",
         de: "relevantDateField"
     },
@@ -356,7 +356,7 @@ tools.add({
         en: "posPrice",
         de: "posPrice"
     },
-    args: {
+    argsOld: {
         en: "",
         de: ""
     },
@@ -379,7 +379,7 @@ tools.add({
         en: "posCategory",
         de: "posCategory"
     },
-    args: {
+    argsOld: {
         en: "",
         de: ""
     },
@@ -400,7 +400,7 @@ tools.add({
         en: "posSimple",
         de: "posSimple"
     },
-    args: {
+    argsOld: {
         en: "",
         de: ""
     },
@@ -432,7 +432,7 @@ tools.add({
         en: "posAsset",
         de: "posAsset"
     },
-    args: {
+    argsOld: {
         en: "",
         de: ""
     },
@@ -457,7 +457,7 @@ tools.add({
         en: "posDescription",
         de: "posDescription"
     },
-    args: {
+    argsOld: {
         en: "",
         de: ""
     },
@@ -482,7 +482,7 @@ tools.add({
         en: "posLocalize",
         de: "posLocalize"
     },
-    args: {
+    argsOld: {
         en: "",
         de: ""
     },
@@ -507,7 +507,7 @@ tools.add({
         en: "sortSpecial",
         de: "sortSpecial"
     },
-    args: {
+    argsOld: {
         en: "images,order",
         de: "images,order"
     },

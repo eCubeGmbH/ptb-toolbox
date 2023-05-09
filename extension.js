@@ -214,7 +214,7 @@ function posIdentifyAffectedOffers(orderUnit, quantityMin, quantityInterval, low
     if(quantityMin > 1){ returnvalue = 1; }
     if(quantityInterval > 1){ returnvalue = 1; }
     if(lowerBound.length > 1 || (lowerBound.length == 1 && lowerBound[0] > 1)){ returnvalue = 1; }
-    if(hazardous > 1){ returnvalue = 1; }
+    if(hazardous > 0){ returnvalue = 1; }
     if(mimeDescHazard.length > 0){ returnvalue = 1; }
     if(mimePurposeHazard.length > 0){ returnvalue = 1; }
     if(tax != '0.19' && tax != '0,19'){ returnvalue = 1; }

@@ -20,9 +20,27 @@ tools.add({
         en: "posHtmlToText",
         de: "posHtmlToText"
     },
-    args: {
+    argsOld: {
         en: "inputString",
         de: "inputString"
+    },
+    args: {
+        en : [
+            {
+                "key" : "inputString",
+                "label": "Value",
+                "type": "text",
+                "desc": "Input HTML which will be converted to text"
+            }
+        ],
+        de : [
+            {
+                "key" : "inputString",
+                "label": "Wert",
+                "type": "text",
+                "desc": "Eingabe HTML was zu einem Text umgewandelt wird"
+            }
+        ]
     },
     tags: ["Possehl"],
     tests: () => {
@@ -78,9 +96,57 @@ tools.add({
         en: "posStripHtml_Test",
         de: "posStripHtml_Test"
     },
-    args: {
+    argsOld: {
         en: "inputString, ersatzOeffnend, ersatzSchliessend, ersatzFuerBR",
         de: "inputString, ersatzOeffnend, ersatzSchliessend, ersatzFuerBR"
+    },
+    args: {
+        en : [
+            {
+                "key" : "inputString",
+                "label": "Input Html",
+                "type": "text",
+                "desc": "Input HTML which will be converted to text"
+            }, {
+                "key" : "ersatzOeffnend",
+                "label": "Opening tag",
+                "type": "text",
+                "desc": "Substitute for opening tag"
+            },{
+                "key" : "ersatzSchliessend",
+                "label": "Closing tag",
+                "type": "text",
+                "desc": "Substitute for closing tag"
+            },{
+                "key" : "ersatzFuerBR",
+                "label": "Line break",
+                "type": "text",
+                "desc": "Substitute for line break"
+            }
+        ],
+        de : [
+            {
+                "key" : "inputString",
+                "label": "Eingabe Html",
+                "type": "text",
+                "desc": "Eingabe HTML was zu einem Text umgewandelt wird"
+            },{
+                "key" : "ersatzOeffnend",
+                "label": "Öffnender Tag",
+                "type": "text",
+                "desc": "Ersatz für öffnenden Tag"
+            },{
+                "key" : "ersatzSchliessend",
+                "label": "Schliessender Tag",
+                "type": "text",
+                "desc": "Ersatz für schliessenden  Tag"
+            },{
+                "key" : "ersatzFuerBR",
+                "label": "Zeilenumbruch",
+                "type": "text",
+                "desc": "Ersatz für Zeilenumbruch"
+            }
+        ]
     },
     tags: ["Possehl"],
     tests: () => {
@@ -106,9 +172,37 @@ tools.add({
         en: "buildCloudinaryPublicId",
         de: "buildCloudinaryPublicId"
     },
-    args: {
+    argsOld: {
         en: "prefix,image",
         de: "prefix,image"
+    },
+    args: {
+        en : [
+            {
+                "key" : "prefix",
+                "label": "Prefix",
+                "type": "text",
+                "desc": "Prefix"
+            },{
+                "key" : "image",
+                "label": "Image",
+                "type": "text",
+                "desc": "Image"
+            }
+        ],
+        de : [
+            {
+                "key" : "prefix",
+                "label": "Präfix",
+                "type": "text",
+                "desc": "Präfix"
+            },{
+                "key" : "image",
+                "label": "Bild",
+                "type": "text",
+                "desc": "Bild"
+            }
+        ]
     },
     tags: ["Possehl"]
 })
@@ -134,9 +228,15 @@ tools.add({
         en: "posIdentifyAffectedOffers",
         de: "posIdentifyAffectedOffers"
     },
-    args: {
+    argsOld: {
         en: "orderUnit, quantityMin, quantityInterval, lowerBound, hazardous, mimeDescHazard, mimePurposeHazard, tax, price_de",
         de: "orderUnit, quantityMin, quantityInterval, lowerBound, hazardous, mimeDescHazard, mimePurposeHazard, tax, price_de"
+    },
+    args: {
+        en : [
+        ],
+        de : [
+        ]
     },
     tags: ["Possehl"]
 })
@@ -157,16 +257,34 @@ tools.add({
         en: "removeFileExtension",
         de: "entferneDateiExtension"
     },
-    args: {
+    argsOld: {
         en: "image",
         de: "image"
+    },
+    args: {
+        en : [
+            {
+                "key" : "image",
+                "label": "Image Path",
+                "type": "text",
+                "desc": "Image where the extension should be removed"
+            }
+        ],
+        de : [
+            {
+                "key" : "image",
+                "label": "Bild Pfad",
+                "type": "text",
+                "desc": "Bild wo die Extension entfernt wird"
+            }
+        ]
     },
     tags: ["Possehl"],
     tests: () => {
         tools.expect(removeFileExtension("bild.jpg")).toBe('bild');
         tools.expect(removeFileExtension("bild.jpg.max")).toBe('bild.jpg.max');
         tools.expect(removeFileExtension("https://210512ytnvmdy73ryr4.nextcloud.hosting.zone/s/CsAqt7bybpmJPs7/download")).
-                                  toBe('https://210512ytnvmdy73ryr4.nextcloud.hosting.zone/s/CsAqt7bybpmJPs7/download');
+        toBe('https://210512ytnvmdy73ryr4.nextcloud.hosting.zone/s/CsAqt7bybpmJPs7/download');
     }
 })
 //-----------------------------------------------------------------------------------------------------
@@ -203,9 +321,27 @@ tools.add({
         en: "posCheckPriceFormat",
         de: "posCheckPriceFormat"
     },
-    args: {
+    argsOld: {
         en: "price",
         de: "price"
+    },
+    args: {
+        en : [
+            {
+                "key" : "price",
+                "label": "Input Prise",
+                "type": "text",
+                "desc": "Price which should be checked if formally correct"
+            }
+        ],
+        de : [
+            {
+                "key" : "price",
+                "label": "Preis Eingabe",
+                "type": "text",
+                "desc": "Preis welcher auf korrektes Format überprüft wird"
+            }
+        ]
     },
     tags: ["Possehl"]
 })
@@ -232,11 +368,16 @@ tools.add({
         en: "getBmeCatImage",
         de: "getBmeCatImage"
     },
-    args: {
+    argsOld: {
         en: "",
         de: ""
     },
-    tags: ["Possehl"]
+    args: {
+        en : [],
+        de : []
+    },
+    tags: ["Possehl"],
+    hideOnSimpleMode: true
 })
 //-----------------------------------------------------------------------------------------------------
 function isImage(url) {
@@ -260,16 +401,34 @@ tools.add({
         en: "isImage",
         de: "isImage"
     },
-    args: {
+    argsOld: {
         en: "url",
         de: "url"
+    },
+    args: {
+        en : [
+            {
+                "key" : "url",
+                "label": "URL input",
+                "type": "text",
+                "desc": "Input url which will be checked if contains Image"
+            }
+        ],
+        de : [
+            {
+                "key" : "url",
+                "label": "URL Eingabe",
+                "type": "text",
+                "desc": "URL welche überprüft wird ob es ein Bild enthält"
+            }
+        ]
     },
     tags: ["Possehl"]
 })
 //-----------------------------------------------------------------------------------------------------
 function fetchRealUrl(url) {
     if(url && url.startsWith && url.startsWith("http")) {
-       return JSON.parse(_apiFetcher.headUrl($('image'), false)).location[0];
+        return JSON.parse(_apiFetcher.headUrl($('image'), false)).location[0];
     }
     return url;
 }
@@ -280,9 +439,27 @@ tools.add({
         en: "fetchRealUrl",
         de: "fetchRealUrl"
     },
-    args: {
+    argsOld: {
         en: "url",
         de: "url"
+    },
+    args: {
+        en : [
+            {
+                "key" : "url",
+                "label": "URL input",
+                "type": "text",
+                "desc": "URL"
+            }
+        ],
+        de : [
+            {
+                "key" : "url",
+                "label": "URL Eingabe",
+                "type": "text",
+                "desc": "URL"
+            }
+        ]
     },
     tags: ["Possehl"]
 })
@@ -313,9 +490,57 @@ tools.add({
         en: "posStripHtmlTags",
         de: "posStripHtmlTags"
     },
-    args: {
+    argsOld: {
         en: "inputString, ersatzOeffnend, ersatzSchliessend, ersatzFuerBR",
         de: "inputString, ersatzOeffnend, ersatzSchliessend, ersatzFuerBR"
+    },
+    args: {
+        en : [
+            {
+                "key" : "inputString",
+                "label": "Input Html",
+                "type": "text",
+                "desc": "Input HTML which will be converted to text"
+            }, {
+                "key" : "ersatzOeffnend",
+                "label": "Opening tag",
+                "type": "text",
+                "desc": "Substitute for opening tag"
+            },{
+                "key" : "ersatzSchliessend",
+                "label": "Closing tag",
+                "type": "text",
+                "desc": "Substitute for closing tag"
+            },{
+                "key" : "ersatzFuerBR",
+                "label": "Line break",
+                "type": "text",
+                "desc": "Substitute for line break"
+            }
+        ],
+        de : [
+            {
+                "key" : "inputString",
+                "label": "Eingabe Html",
+                "type": "text",
+                "desc": "Eingabe HTML was zu einem Text umgewandelt wird"
+            },{
+                "key" : "ersatzOeffnend",
+                "label": "Öffnender Tag",
+                "type": "text",
+                "desc": "Ersatz für öffnenden Tag"
+            },{
+                "key" : "ersatzSchliessend",
+                "label": "Schliessender Tag",
+                "type": "text",
+                "desc": "Ersatz für schliessenden  Tag"
+            },{
+                "key" : "ersatzFuerBR",
+                "label": "Zeilenumbruch",
+                "type": "text",
+                "desc": "Ersatz für Zeilenumbruch"
+            }
+        ]
     },
     tags: ["Possehl"]
 })
@@ -339,9 +564,27 @@ tools.add({
         en: "dateBeforeToday",
         de: "dateBeforeToday"
     },
-    args: {
+    argsOld: {
         en: "relevantDateField",
         de: "relevantDateField"
+    },
+    args: {
+        en : [
+            {
+                "key" : "relevantDateField",
+                "label": "Inpute Date",
+                "type": "text",
+                "desc": "Date which will be checked if before today"
+            }
+        ],
+        de : [
+            {
+                "key" : "relevantDateField",
+                "label": "Eingabe Datum",
+                "type": "text",
+                "desc": "Datum welches übrprüft wird ob es vor dem heutigen Tag liegt"
+            }
+        ]
     },
     tags: ["Possehl"]
 })
@@ -356,11 +599,18 @@ tools.add({
         en: "posPrice",
         de: "posPrice"
     },
-    args: {
+    argsOld: {
         en: "",
         de: ""
     },
-    tags: ["Possehl"]
+    args: {
+        en : [
+        ],
+        de : [
+        ]
+    },
+    tags: ["Possehl"],
+    hideOnSimpleMode: true
 })
 //-----------------------------------------------------------------------------------------------------
 function posCategory() {
@@ -379,11 +629,18 @@ tools.add({
         en: "posCategory",
         de: "posCategory"
     },
-    args: {
+    argsOld: {
         en: "",
         de: ""
     },
-    tags: ["Possehl"]
+    args: {
+        en : [
+        ],
+        de : [
+        ]
+    },
+    tags: ["Possehl"],
+    hideOnSimpleMode: true
 })
 //-----------------------------------------------------------------------------------------------------
 function posSimple() {
@@ -400,11 +657,18 @@ tools.add({
         en: "posSimple",
         de: "posSimple"
     },
-    args: {
+    argsOld: {
         en: "",
         de: ""
     },
-    tags: ["Possehl"]
+    args: {
+        en : [
+        ],
+        de : [
+        ]
+    },
+    tags: ["Possehl"],
+    hideOnSimpleMode: true
 })
 //-----------------------------------------------------------------------------------------------------
 function posAsset() {
@@ -432,11 +696,18 @@ tools.add({
         en: "posAsset",
         de: "posAsset"
     },
-    args: {
+    argsOld: {
         en: "",
         de: ""
     },
-    tags: ["Possehl"]
+    args: {
+        en : [
+        ],
+        de : [
+        ]
+    },
+    tags: ["Possehl"],
+    hideOnSimpleMode: true
 })
 //-----------------------------------------------------------------------------------------------------
 function posDescription() {
@@ -457,11 +728,18 @@ tools.add({
         en: "posDescription",
         de: "posDescription"
     },
-    args: {
+    argsOld: {
         en: "",
         de: ""
     },
-    tags: ["Possehl"]
+    args: {
+        en : [
+        ],
+        de : [
+        ]
+    },
+    tags: ["Possehl"],
+    hideOnSimpleMode: true
 })
 //-----------------------------------------------------------------------------------------------------
 function posLocalize() {
@@ -482,11 +760,18 @@ tools.add({
         en: "posLocalize",
         de: "posLocalize"
     },
-    args: {
+    argsOld: {
         en: "",
         de: ""
     },
-    tags: ["Possehl"]
+    args: {
+        en : [
+        ],
+        de : [
+        ]
+    },
+    tags: ["Possehl"],
+    hideOnSimpleMode: true
 })
 //-----------------------------------------------------------------------------------------------------
 function sortSpecial(images,order) {
@@ -507,13 +792,21 @@ tools.add({
         en: "sortSpecial",
         de: "sortSpecial"
     },
-    args: {
+    argsOld: {
         en: "images,order",
         de: "images,order"
     },
-    tags: ["Possehl"]
+    args: {
+        en : [
+        ],
+        de : [
+        ]
+    },
+    tags: ["Possehl"],
+    hideOnSimpleMode: true
 
 })
 
 //-------------WRITE YOUR FUNCTIONS ABOVE THIS LINE------------------
 tools.exportAll(exports)
+

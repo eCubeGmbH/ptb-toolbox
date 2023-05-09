@@ -241,6 +241,40 @@ tools.add({
     tags: ["Possehl"]
 })
 //-----------------------------------------------------------------------------------------------------
+function excludedOffers(orderUnit, quantityMin, quantityInterval, lowerBound, hazardous, mimeDescHazard, mimePurposeHazard, tax, price_de) {
+    var returnvalue = 0;
+    var units = ["c62", "stk", "pce"];
+    if(units.indexOf(orderUnit.toLowerCase()) == -1){ returnvalue = 1; }
+    if(quantityMin > 1){ returnvalue = 1; }
+    if(quantityInterval > 1){ returnvalue = 1; }
+    if(lowerBound.length > 1 || (lowerBound.length == 1 && lowerBound[0] > 1)){ returnvalue = 1; }
+    if(hazardous > 0){ returnvalue = 1; }
+    if(mimeDescHazard.length > 0){ returnvalue = 1; }
+    if(mimePurposeHazard.length > 0){ returnvalue = 1; }
+    if(tax != '0.19' && tax != '0,19'){ returnvalue = 1; }
+    if(price_de <= "0"){ returnvalue = 1; }
+    return returnvalue;
+}
+tools.add({
+    id: "excludedOffers",
+    impl: excludedOffers,
+    aliases: {
+        en: "excludedOffers",
+        de: "excludedOffers"
+    },
+    argsOld: {
+        en: "orderUnit, quantityMin, quantityInterval, lowerBound, hazardous, mimeDescHazard, mimePurposeHazard, tax, price_de",
+        de: "orderUnit, quantityMin, quantityInterval, lowerBound, hazardous, mimeDescHazard, mimePurposeHazard, tax, price_de"
+    },
+    args: {
+        en : [
+        ],
+        de : [
+        ]
+    },
+    tags: ["Possehl"]
+})
+//-----------------------------------------------------------------------------------------------------
 function removeFileExtension(image) {
     let result = "";
     if (image.endsWith(".jpg") || image.endsWith(".png") || image.endsWith(".tiff") || image.endsWith(".jpeg") || image.endsWith(".gif") || image.endsWith(".pdf") || image.endsWith(".bmp")) {

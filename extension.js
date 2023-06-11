@@ -11,7 +11,7 @@ const { htmlToText } = require('html-to-text');
 const tools = new Toolpackage("My great toolbox extension")
 
 function posHtmlToText(inputString) {
-    return htmlToText(inputString, { wordwrap: null });
+    return htmlToText(inputString, { wordwrap: null, preserveNewlines: true });
 }
 tools.add({
     id: "posHtmlToText",

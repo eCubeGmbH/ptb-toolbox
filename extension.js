@@ -11,7 +11,18 @@ const { htmlToText } = require('html-to-text');
 const tools = new Toolpackage("My great toolbox extension")
 
 function posHtmlToText(inputString) {
-    return htmlToText(inputString, { wordwrap: null, preserveNewlines: true });
+    let htmlToTextLogic = inp => htmlToText(inp, { wordwrap: null, preserveNewlines: true });
+    if(Array.isArray(inputString)) {
+        //localized text support
+        inputString.map(tx => {
+            tx['value'] = htmlToTextLogic(tx['value'])
+            return tx;
+        });
+
+    } else {
+        inputString = htmlToTextLogic(inputString);
+    }
+    return inputString;
 }
 tools.add({
     id: "posHtmlToText",

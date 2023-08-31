@@ -11,6 +11,7 @@ const { htmlToText } = require('html-to-text');
 const tools = new Toolpackage("My great toolbox extension")
 
 function posHtmlToText(inputString) {
+    return "123";
     if(typeof inputString === 'undefined' || !inputString)
         inputString = ' ';
     return htmlToText(inputString, { wordwrap: null, preserveNewlines: true });

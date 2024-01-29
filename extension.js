@@ -35,24 +35,16 @@ tools.add({
         en: "inputString",
         de: "inputString"
     },
-    args: {
-        en : [
-            {
-                "key" : "inputString",
-                "label": "Value",
-                "type": "text",
-                "desc": "Input HTML which will be converted to text"
-            }
-        ],
-        de : [
-            {
-                "key" : "inputString",
-                "label": "Wert",
-                "type": "text",
-                "desc": "Eingabe HTML was zu einem Text umgewandelt wird"
-            }
-        ]
-    },
+    args: [
+        {
+            "key": "inputString",
+            "label_en": "Value",
+            "label_de": "Wert",
+            "type": "text",
+            "desc_en": "Input HTML which will be converted to text",
+            "desc_de": "Eingabe HTML was zu einem Text umgewandelt wird"
+        }
+    ],
     tags: ["Possehl"],
     tests: () => {
         tools.expect(posHtmlToText("<h1>Title</h1><p>total</p>hello<br>w&ouml;rld")).toBe('TITLE\n\ntotal\n\nhello\nwörld');
@@ -60,27 +52,6 @@ tools.add({
 })
 //-----------------------------------------------------------------------------------------------------
 
-// function niceFunction22(input1, input2) {
-//     return base.upperCaseText(input1) + " " + base.lowerCaseText(input2);
-// }
-// tools.add({
-//     id: "niceFunction22",
-//     impl: niceFunction22,
-//     aliases: {
-//         en: "niceFunction22",
-//         de: "netteFunktion22"
-//     },
-//     args: {
-//         en: "input1, input2",
-//         de: "eingabe1, eingabe2"
-//     },
-//     tags: ["Possehl"],
-//     tests: () => {
-//         tools.expect(niceFunction22("hello", "world")).toBe('HELLO world');
-//         tools.expect(niceFunction22("Helping", "World")).toBe('HELPING world');
-//     }
-// })
-//-----------------------------------------------------------------------------------------------------
 function posStripHtml_Test(inputString, ersatzOeffnend, ersatzSchliessend, ersatzFuerBR) {
     var outputString = "";
     outputString = base.ersetzeInText(inputString, /<br[^>]*>/g, ersatzFuerBR);
@@ -111,54 +82,40 @@ tools.add({
         en: "inputString, ersatzOeffnend, ersatzSchliessend, ersatzFuerBR",
         de: "inputString, ersatzOeffnend, ersatzSchliessend, ersatzFuerBR"
     },
-    args: {
-        en : [
-            {
-                "key" : "inputString",
-                "label": "Input Html",
-                "type": "text",
-                "desc": "Input HTML which will be converted to text"
-            }, {
-                "key" : "ersatzOeffnend",
-                "label": "Opening tag",
-                "type": "text",
-                "desc": "Substitute for opening tag"
-            },{
-                "key" : "ersatzSchliessend",
-                "label": "Closing tag",
-                "type": "text",
-                "desc": "Substitute for closing tag"
-            },{
-                "key" : "ersatzFuerBR",
-                "label": "Line break",
-                "type": "text",
-                "desc": "Substitute for line break"
-            }
-        ],
-        de : [
-            {
-                "key" : "inputString",
-                "label": "Eingabe Html",
-                "type": "text",
-                "desc": "Eingabe HTML was zu einem Text umgewandelt wird"
-            },{
-                "key" : "ersatzOeffnend",
-                "label": "Öffnender Tag",
-                "type": "text",
-                "desc": "Ersatz für öffnenden Tag"
-            },{
-                "key" : "ersatzSchliessend",
-                "label": "Schliessender Tag",
-                "type": "text",
-                "desc": "Ersatz für schliessenden  Tag"
-            },{
-                "key" : "ersatzFuerBR",
-                "label": "Zeilenumbruch",
-                "type": "text",
-                "desc": "Ersatz für Zeilenumbruch"
-            }
-        ]
-    },
+    args: [
+        {
+            "key": "inputString",
+            "label_en": "Input Html",
+            "label_de": "Eingabe Html",
+            "type": "text",
+            "desc_en": "Input HTML which will be converted to text",
+            "desc_de": "Eingabe HTML was zu einem Text umgewandelt wird"
+        },
+        {
+            "key": "ersatzOeffnend",
+            "label_en": "Opening tag",
+            "label_de": "Öffnender Tag",
+            "type": "text",
+            "desc_en": "Substitute for opening tag",
+            "desc_de": "Ersatz für öffnenden Tag"
+        },
+        {
+            "key": "ersatzSchliessend",
+            "label_en": "Closing tag",
+            "label_de": "Schliessender Tag",
+            "type": "text",
+            "desc_en": "Substitute for closing tag",
+            "desc_de": "Ersatz für schliessenden  Tag"
+        },
+        {
+            "key": "ersatzFuerBR",
+            "label_en": "Line break",
+            "label_de": "Zeilenumbruch",
+            "type": "text",
+            "desc_en": "Substitute for line break",
+            "desc_de": "Ersatz für Zeilenumbruch"
+        }
+    ],
     tags: ["Possehl"],
     tests: () => {
         tools.expect(posStripHtml_Test("<br><p>total</p>hello", "","","")).toBe('totalhello');
@@ -187,34 +144,24 @@ tools.add({
         en: "prefix,image",
         de: "prefix,image"
     },
-    args: {
-        en : [
-            {
-                "key" : "prefix",
-                "label": "Prefix",
-                "type": "text",
-                "desc": "Prefix"
-            },{
-                "key" : "image",
-                "label": "Image",
-                "type": "text",
-                "desc": "Image"
-            }
-        ],
-        de : [
-            {
-                "key" : "prefix",
-                "label": "Präfix",
-                "type": "text",
-                "desc": "Präfix"
-            },{
-                "key" : "image",
-                "label": "Bild",
-                "type": "text",
-                "desc": "Bild"
-            }
-        ]
-    },
+    args: [
+        {
+            "key": "prefix",
+            "label_en": "Prefix",
+            "label_de": "Präfix",
+            "type": "text",
+            "desc_en": "Prefix",
+            "desc_de": "Präfix"
+        },
+        {
+            "key": "image",
+            "label_en": "Image",
+            "label_de": "Bild",
+            "type": "text",
+            "desc_en": "Image",
+            "desc_de": "Bild"
+        }
+    ],
     tags: ["Possehl"]
 })
 //-----------------------------------------------------------------------------------------------------
@@ -243,12 +190,7 @@ tools.add({
         en: "orderUnit, quantityMin, quantityInterval, lowerBound, hazardous, mimeDescHazard, mimePurposeHazard, tax, price_de",
         de: "orderUnit, quantityMin, quantityInterval, lowerBound, hazardous, mimeDescHazard, mimePurposeHazard, tax, price_de"
     },
-    args: {
-        en : [
-        ],
-        de : [
-        ]
-    },
+    args: [],
     tags: ["Possehl"]
 })
 //-----------------------------------------------------------------------------------------------------
@@ -277,12 +219,7 @@ tools.add({
         en: "orderUnit, quantityMin, quantityInterval, lowerBound, hazardous, mimeDescHazard, mimePurposeHazard, tax, price_de",
         de: "orderUnit, quantityMin, quantityInterval, lowerBound, hazardous, mimeDescHazard, mimePurposeHazard, tax, price_de"
     },
-    args: {
-        en : [
-        ],
-        de : [
-        ]
-    },
+    args: [],
     tags: ["Possehl"]
 })
 //-----------------------------------------------------------------------------------------------------
@@ -306,24 +243,16 @@ tools.add({
         en: "image",
         de: "image"
     },
-    args: {
-        en : [
-            {
-                "key" : "image",
-                "label": "Image Path",
-                "type": "text",
-                "desc": "Image where the extension should be removed"
-            }
-        ],
-        de : [
-            {
-                "key" : "image",
-                "label": "Bild Pfad",
-                "type": "text",
-                "desc": "Bild wo die Extension entfernt wird"
-            }
-        ]
-    },
+    args: [
+        {
+            "key": "image",
+            "label_en": "Image Path",
+            "label_de": "Bild Pfad",
+            "type": "text",
+            "desc_en": "Image where the extension should be removed",
+            "desc_de": "Bild wo die Extension entfernt wird"
+        }
+    ],
     tags: ["Possehl"],
     tests: () => {
         tools.expect(removeFileExtension("bild.jpg")).toBe('bild');
@@ -370,24 +299,16 @@ tools.add({
         en: "price",
         de: "price"
     },
-    args: {
-        en : [
-            {
-                "key" : "price",
-                "label": "Input Prise",
-                "type": "text",
-                "desc": "Price which should be checked if formally correct"
-            }
-        ],
-        de : [
-            {
-                "key" : "price",
-                "label": "Preis Eingabe",
-                "type": "text",
-                "desc": "Preis welcher auf korrektes Format überprüft wird"
-            }
-        ]
-    },
+    args: [
+        {
+            "key": "price",
+            "label_en": "Input Prise",
+            "label_de": "Preis Eingabe",
+            "type": "text",
+            "desc_en": "Price which should be checked if formally correct",
+            "desc_de": "Preis welcher auf korrektes Format überprüft wird"
+        }
+    ],
     tags: ["Possehl"]
 })
 //-----------------------------------------------------------------------------------------------------
@@ -417,10 +338,7 @@ tools.add({
         en: "",
         de: ""
     },
-    args: {
-        en : [],
-        de : []
-    },
+    args: [],
     tags: ["Possehl"],
     hideOnSimpleMode: true
 })
@@ -450,24 +368,16 @@ tools.add({
         en: "url",
         de: "url"
     },
-    args: {
-        en : [
-            {
-                "key" : "url",
-                "label": "URL input",
-                "type": "text",
-                "desc": "Input url which will be checked if contains Image"
-            }
-        ],
-        de : [
-            {
-                "key" : "url",
-                "label": "URL Eingabe",
-                "type": "text",
-                "desc": "URL welche überprüft wird ob es ein Bild enthält"
-            }
-        ]
-    },
+    args: [
+        {
+            "key": "url",
+            "label_en": "URL input",
+            "label_de": "URL Eingabe",
+            "type": "text",
+            "desc_en": "Input url which will be checked if contains Image",
+            "desc_de": "URL welche überprüft wird ob es ein Bild enthält"
+        }
+    ],
     tags: ["Possehl"]
 })
 //-----------------------------------------------------------------------------------------------------
@@ -488,24 +398,16 @@ tools.add({
         en: "url",
         de: "url"
     },
-    args: {
-        en : [
-            {
-                "key" : "url",
-                "label": "URL input",
-                "type": "text",
-                "desc": "URL"
-            }
-        ],
-        de : [
-            {
-                "key" : "url",
-                "label": "URL Eingabe",
-                "type": "text",
-                "desc": "URL"
-            }
-        ]
-    },
+    args: [
+        {
+            "key": "url",
+            "label_en": "URL input",
+            "label_de": "URL Eingabe",
+            "type": "text",
+            "desc_en": "URL",
+            "desc_de": "URL"
+        }
+    ],
     tags: ["Possehl"]
 })
 //-----------------------------------------------------------------------------------------------------
@@ -539,54 +441,40 @@ tools.add({
         en: "inputString, ersatzOeffnend, ersatzSchliessend, ersatzFuerBR",
         de: "inputString, ersatzOeffnend, ersatzSchliessend, ersatzFuerBR"
     },
-    args: {
-        en : [
-            {
-                "key" : "inputString",
-                "label": "Input Html",
-                "type": "text",
-                "desc": "Input HTML which will be converted to text"
-            }, {
-                "key" : "ersatzOeffnend",
-                "label": "Opening tag",
-                "type": "text",
-                "desc": "Substitute for opening tag"
-            },{
-                "key" : "ersatzSchliessend",
-                "label": "Closing tag",
-                "type": "text",
-                "desc": "Substitute for closing tag"
-            },{
-                "key" : "ersatzFuerBR",
-                "label": "Line break",
-                "type": "text",
-                "desc": "Substitute for line break"
-            }
-        ],
-        de : [
-            {
-                "key" : "inputString",
-                "label": "Eingabe Html",
-                "type": "text",
-                "desc": "Eingabe HTML was zu einem Text umgewandelt wird"
-            },{
-                "key" : "ersatzOeffnend",
-                "label": "Öffnender Tag",
-                "type": "text",
-                "desc": "Ersatz für öffnenden Tag"
-            },{
-                "key" : "ersatzSchliessend",
-                "label": "Schliessender Tag",
-                "type": "text",
-                "desc": "Ersatz für schliessenden  Tag"
-            },{
-                "key" : "ersatzFuerBR",
-                "label": "Zeilenumbruch",
-                "type": "text",
-                "desc": "Ersatz für Zeilenumbruch"
-            }
-        ]
-    },
+    args: [
+        {
+            "key": "inputString",
+            "label_en": "Input Html",
+            "label_de": "Eingabe Html",
+            "type": "text",
+            "desc_en": "Input HTML which will be converted to text",
+            "desc_de": "Eingabe HTML was zu einem Text umgewandelt wird"
+        },
+        {
+            "key": "ersatzOeffnend",
+            "label_en": "Opening tag",
+            "label_de": "Öffnender Tag",
+            "type": "text",
+            "desc_en": "Substitute for opening tag",
+            "desc_de": "Ersatz für öffnenden Tag"
+        },
+        {
+            "key": "ersatzSchliessend",
+            "label_en": "Closing tag",
+            "label_de": "Schliessender Tag",
+            "type": "text",
+            "desc_en": "Substitute for closing tag",
+            "desc_de": "Ersatz für schliessenden  Tag"
+        },
+        {
+            "key": "ersatzFuerBR",
+            "label_en": "Line break",
+            "label_de": "Zeilenumbruch",
+            "type": "text",
+            "desc_en": "Substitute for line break",
+            "desc_de": "Ersatz für Zeilenumbruch"
+        }
+    ],
     tags: ["Possehl"]
 })
 //-----------------------------------------------------------------------------------------------------
@@ -613,24 +501,16 @@ tools.add({
         en: "relevantDateField",
         de: "relevantDateField"
     },
-    args: {
-        en : [
-            {
-                "key" : "relevantDateField",
-                "label": "Inpute Date",
-                "type": "text",
-                "desc": "Date which will be checked if before today"
-            }
-        ],
-        de : [
-            {
-                "key" : "relevantDateField",
-                "label": "Eingabe Datum",
-                "type": "text",
-                "desc": "Datum welches übrprüft wird ob es vor dem heutigen Tag liegt"
-            }
-        ]
-    },
+    args: [
+        {
+            "key": "relevantDateField",
+            "label_en": "Inpute Date",
+            "label_de": "Eingabe Datum",
+            "type": "text",
+            "desc_en": "Date which will be checked if before today",
+            "desc_de": "Datum welches übrprüft wird ob es vor dem heutigen Tag liegt"
+        }
+    ],
     tags: ["Possehl"]
 })
 //-----------------------------------------------------------------------------------------------------
@@ -648,12 +528,7 @@ tools.add({
         en: "",
         de: ""
     },
-    args: {
-        en : [
-        ],
-        de : [
-        ]
-    },
+    args: [],
     tags: ["Possehl"],
     hideOnSimpleMode: true
 })
@@ -678,12 +553,7 @@ tools.add({
         en: "",
         de: ""
     },
-    args: {
-        en : [
-        ],
-        de : [
-        ]
-    },
+    args: [],
     tags: ["Possehl"],
     hideOnSimpleMode: true
 })
@@ -706,12 +576,7 @@ tools.add({
         en: "",
         de: ""
     },
-    args: {
-        en : [
-        ],
-        de : [
-        ]
-    },
+    args: [],
     tags: ["Possehl"],
     hideOnSimpleMode: true
 })
@@ -745,12 +610,7 @@ tools.add({
         en: "",
         de: ""
     },
-    args: {
-        en : [
-        ],
-        de : [
-        ]
-    },
+    args: [],
     tags: ["Possehl"],
     hideOnSimpleMode: true
 })
@@ -777,12 +637,7 @@ tools.add({
         en: "",
         de: ""
     },
-    args: {
-        en : [
-        ],
-        de : [
-        ]
-    },
+    args: [],
     tags: ["Possehl"],
     hideOnSimpleMode: true
 })
@@ -809,12 +664,7 @@ tools.add({
         en: "",
         de: ""
     },
-    args: {
-        en : [
-        ],
-        de : [
-        ]
-    },
+    args: [],
     tags: ["Possehl"],
     hideOnSimpleMode: true
 })
@@ -841,12 +691,7 @@ tools.add({
         en: "images,order",
         de: "images,order"
     },
-    args: {
-        en : [
-        ],
-        de : [
-        ]
-    },
+    args: [],
     tags: ["Possehl"],
     hideOnSimpleMode: true
 

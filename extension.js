@@ -42,7 +42,7 @@ tools.add({
             "label_de": "Wert",
             "type": "text",
             "desc_en": "Input HTML which will be converted to text",
-            "desc_de": "Eingabe HTML was zu einem Text umgewandelt wird"
+            "desc_de": "HTML das zu einem Text umgewandelt wird"
         }
     ],
     tags: ["Possehl"],
@@ -89,7 +89,7 @@ tools.add({
             "label_de": "Eingabe Html",
             "type": "text",
             "desc_en": "Input HTML which will be converted to text",
-            "desc_de": "Eingabe HTML was zu einem Text umgewandelt wird"
+            "desc_de": "HTML das zu einem Text umgewandelt wird"
         },
         {
             "key": "ersatzOeffnend",
@@ -250,7 +250,7 @@ tools.add({
             "label_de": "Bild Pfad",
             "type": "text",
             "desc_en": "Image where the extension should be removed",
-            "desc_de": "Bild wo die Extension entfernt wird"
+            "desc_de": "Bild an dem die Extension entfernt wird"
         }
     ],
     tags: ["Possehl"],
@@ -306,7 +306,7 @@ tools.add({
             "label_de": "Preis Eingabe",
             "type": "text",
             "desc_en": "Price which should be checked if formally correct",
-            "desc_de": "Preis welcher auf korrektes Format überprüft wird"
+            "desc_de": "Preis der auf korrektes Format überprüft wird"
         }
     ],
     tags: ["Possehl"]
